@@ -1,0 +1,62 @@
+===
+empty
+===
+
+()
+
+---
+
+(source_file
+  (array))
+
+===
+single
+===
+
+(5)
+
+---
+
+(source_file
+  (array
+    (number)))
+
+===
+single with trailing comma
+===
+
+(5,)
+
+---
+
+(source_file
+  (array
+    (number)))
+
+===
+multiple
+===
+
+(1, 2, 3)
+
+---
+
+(source_file
+  (array
+    (number)
+    (number)
+    (number)))
+
+===
+multiple with trailing comma
+===
+
+(1, 2, 3,)
+
+---
+
+(source_file
+  (array
+    (number)
+    (number)
+    (number)))

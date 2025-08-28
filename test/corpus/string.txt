@@ -1,0 +1,322 @@
+===
+empty quoted string
+===
+
+""
+
+---
+
+(source_file
+  (string
+    (quoted_string)))
+
+===
+simple quoted string
+===
+
+"hello"
+
+---
+
+(source_file
+  (string
+    (quoted_string)))
+
+===
+quoted string with spaces
+===
+
+"hello world"
+
+---
+
+(source_file
+  (string
+    (quoted_string)))
+
+===
+quoted string with numbers and symbols
+===
+
+"hello123!@#"
+
+---
+
+(source_file
+  (string
+    (quoted_string)))
+
+===
+empty single quoted string
+===
+
+''
+
+---
+
+(source_file
+  (string
+    (single_quoted_string)))
+
+===
+simple single quoted string
+===
+
+'hello'
+
+---
+
+(source_file
+  (string
+    (single_quoted_string)))
+
+===
+single quoted string with spaces
+===
+
+'hello world'
+
+---
+
+(source_file
+  (string
+    (single_quoted_string)))
+
+===
+single quoted string with numbers and symbols
+===
+
+'hello123!@#'
+
+---
+
+(source_file
+  (string
+    (single_quoted_string)))
+
+===
+simple unquoted string
+===
+
+hello
+
+---
+
+(source_file
+  (string
+    (unquoted_string)))
+
+===
+unquoted string with letters and numbers
+===
+
+hello123
+
+---
+
+(source_file
+  (string
+    (unquoted_string)))
+
+===
+unquoted string with allowed symbols
+===
+
+hello_world.txt
+
+---
+
+(source_file
+  (string
+    (unquoted_string)))
+
+===
+unquoted string with path
+===
+
+/usr/local/bin
+
+---
+
+(source_file
+  (string
+    (unquoted_string)))
+
+===
+unquoted string with dollar sign
+===
+
+$HOME
+
+---
+
+(source_file
+  (string
+    (unquoted_string)))
+
+===
+quoted string with backslash escape
+===
+
+"hello\\world"
+
+---
+
+(source_file
+  (string
+    (quoted_string
+      (escape_sequence))))
+
+===
+quoted string with quote escape
+===
+
+"hello\"world"
+
+---
+
+(source_file
+  (string
+    (quoted_string
+      (escape_sequence))))
+
+===
+quoted string with newline escape
+===
+
+"hello\nworld"
+
+---
+
+(source_file
+  (string
+    (quoted_string
+      (escape_sequence))))
+
+===
+quoted string with tab escape
+===
+
+"hello\tworld"
+
+---
+
+(source_file
+  (string
+    (quoted_string
+      (escape_sequence))))
+
+===
+single quoted string with backslash escape
+===
+
+'hello\\world'
+
+---
+
+(source_file
+  (string
+    (single_quoted_string
+      (escape_sequence))))
+
+===
+single quoted string with quote escape
+===
+
+'hello\'world'
+
+---
+
+(source_file
+  (string
+    (single_quoted_string
+      (escape_sequence))))
+
+===
+quoted string with octal escape
+===
+
+"hello\012world"
+
+---
+
+(source_file
+  (string
+    (quoted_string
+      (escape_sequence))))
+
+===
+quoted string with unicode escape
+===
+
+"hello\U0041world"
+
+---
+
+(source_file
+  (string
+    (quoted_string
+      (escape_sequence))))
+
+===
+quoted string with multiple escapes
+===
+
+"hello\n\t\\"
+
+---
+
+(source_file
+  (string
+    (quoted_string
+      (escape_sequence)
+      (escape_sequence)
+      (escape_sequence))))
+
+===
+quoted string with line comment inside
+===
+
+"This string contains // not a comment"
+
+---
+
+(source_file
+  (string
+    (quoted_string)))
+
+===
+quoted string with block comment inside
+===
+
+"This has /* not a comment */ inside"
+
+---
+
+(source_file
+  (string
+    (quoted_string)))
+
+===
+single quoted string with line comment inside
+===
+
+'This string contains // not a comment'
+
+---
+
+(source_file
+  (string
+    (single_quoted_string)))
+
+===
+single quoted string with block comment inside
+===
+
+'This has /* not a comment */ inside'
+
+---
+
+(source_file
+  (string
+    (single_quoted_string)))

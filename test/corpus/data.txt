@@ -1,0 +1,239 @@
+===
+empty data
+===
+
+<>
+
+---
+
+(source_file
+  (data))
+
+===
+single hex byte lowercase
+===
+
+<ab>
+
+---
+
+(source_file
+  (data
+    (byte)))
+
+===
+single hex byte uppercase
+===
+
+<AB>
+
+---
+
+(source_file
+  (data
+    (byte)))
+
+===
+single hex byte mixed case
+===
+
+<aB>
+
+---
+
+(source_file
+  (data
+    (byte)))
+
+===
+two hex bytes
+===
+
+<abcd>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)))
+
+===
+multiple hex bytes
+===
+
+<48656c6c6f>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+long data sequence
+===
+
+<48656c6c6f20576f726c64>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data with all hex digits
+===
+
+<0123456789abcdef>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data with all hex digits uppercase
+===
+
+<0123456789ABCDEF>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data with mixed case
+===
+
+<0a1B2c3D4e5F>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data with whitespace
+===
+
+<
+  ab cd ef
+  01 23 45
+>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data with various whitespace
+===
+
+< ab	cd
+ef >
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data representing text
+===
+
+<48656C6C6F20576F726C64>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data representing binary
+===
+
+<FF00FF00>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)))
+
+===
+data with zero bytes
+===
+
+<00112200>
+
+---
+
+(source_file
+  (data
+    (byte)
+    (byte)
+    (byte)
+    (byte)))

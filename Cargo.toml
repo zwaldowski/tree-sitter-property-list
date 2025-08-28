@@ -1,0 +1,35 @@
+[package]
+name = "tree-sitter-property-list"
+description = "Property List grammar for tree-sitter. This grammar covers the OpenStep-style property list format, also known as NeXTSTEP-style, old-style, or ASCII plist format."
+version = "0.1.1"
+authors = ["Florian Pircher <florian@formkunft.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["incremental", "parsing", "tree-sitter", "property-list"]
+categories = ["parser-implementations", "parsing", "text-editors"]
+repository = "https://github.com/formkunft/tree-sitter-property-list"
+homepage = "https://formkunft.com/software/tree-sitter-property-list"
+edition = "2021"
+autoexamples = false
+
+build = "bindings/rust/build.rs"
+include = [
+  "bindings/rust/*",
+  "grammar.js",
+  "queries/*",
+  "src/*",
+  "tree-sitter.json",
+  "LICENSE",
+]
+
+[lib]
+path = "bindings/rust/lib.rs"
+
+[dependencies]
+tree-sitter-language = "0.1"
+
+[build-dependencies]
+cc = "1.2"
+
+[dev-dependencies]
+tree-sitter = "0.25.6"

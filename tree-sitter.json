@@ -1,0 +1,43 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "property_list",
+      "camelcase": "PropertyList",
+      "title": "Property List",
+      "scope": "source.plist",
+      "file-types": [
+        "plist",
+        "glyph",
+        "glyphs"
+      ],
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^(?:(?:openstep-)?plist|property_list|glyphs?)$",
+      "class-name": "TreeSitterPropertyList"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.1",
+    "license": "MIT",
+    "description": "Property List grammar for tree-sitter. This grammar covers the OpenStep-style property list format, also known as NeXTSTEP-style, old-style, or ASCII plist format.",
+    "authors": [
+      {
+        "name": "Florian Pircher",
+        "email": "florian@formkunft.com",
+        "url": "https://formkunft.com/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Formkunft/tree-sitter-property-list"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

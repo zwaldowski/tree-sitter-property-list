@@ -1,0 +1,349 @@
+===
+empty dictionary
+===
+
+{}
+
+---
+
+(source_file
+  (dictionary))
+
+===
+single entry with quoted key
+===
+
+{"name" = "Some Name";}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))))
+
+===
+single entry with unquoted key
+===
+
+{name = "Some Name";}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (unquoted_string))
+      value: (string
+        (quoted_string)))))
+
+===
+single entry with single quoted key
+===
+
+{'name' = "Some Name";}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (single_quoted_string))
+      value: (string
+        (quoted_string)))))
+
+===
+multiple entries
+===
+
+{
+  "name" = "Some Name";
+  "age" = 30;
+}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (number))))
+
+===
+multiple entries on one line
+===
+
+{"name" = "Some Name"; "age" = 30;}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (number))))
+
+===
+dictionary with array value
+===
+
+{"fruits" = ("apple", "banana", "cherry");}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (array
+        (string
+          (quoted_string))
+        (string
+          (quoted_string))
+        (string
+          (quoted_string))))))
+
+===
+dictionary with number value
+===
+
+{"count" = 42;}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (number))))
+
+===
+dictionary with data value
+===
+
+{"data" = <48656C6C6F>;}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (data
+        (byte)
+        (byte)
+        (byte)
+        (byte)
+        (byte)))))
+
+===
+nested dictionary
+===
+
+{
+  "person" = {
+    "name" = "Some Name";
+    "age" = 30;
+  };
+}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (dictionary
+        (dictionary_entry
+          key: (string
+            (quoted_string))
+          value: (string
+            (quoted_string)))
+        (dictionary_entry
+          key: (string
+            (quoted_string))
+          value: (number))))))
+
+===
+complex nested structure
+===
+
+{
+  "users" = (
+    {
+      "name" = "Some Name";
+      "permissions" = ("read", "write");
+    },
+    {
+      "name" = "Other Name";
+      "permissions" = ("read");
+    }
+  );
+}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (array
+        (dictionary
+          (dictionary_entry
+            key: (string
+              (quoted_string))
+            value: (string
+              (quoted_string)))
+          (dictionary_entry
+            key: (string
+              (quoted_string))
+            value: (array
+              (string
+                (quoted_string))
+              (string
+                (quoted_string)))))
+        (dictionary
+          (dictionary_entry
+            key: (string
+              (quoted_string))
+            value: (string
+              (quoted_string)))
+          (dictionary_entry
+            key: (string
+              (quoted_string))
+            value: (array
+              (string
+                (quoted_string)))))))))
+
+===
+mixed key types
+===
+
+{
+  "quoted_key" = "value1";
+  unquoted_key = "value2";
+  'single_quoted' = "value3";
+}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))
+    (dictionary_entry
+      key: (string
+        (unquoted_string))
+      value: (string
+        (quoted_string)))
+    (dictionary_entry
+      key: (string
+        (single_quoted_string))
+      value: (string
+        (quoted_string)))))
+
+===
+mixed value types
+===
+
+{
+  "string_val" = "hello";
+  "number_val" = 42;
+  "array_val" = (1, 2, 3);
+  "dict_val" = {"nested" = "value";};
+  "data_val" = <ABCD>;
+}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (number))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (array
+        (number)
+        (number)
+        (number)))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (dictionary
+        (dictionary_entry
+          key: (string
+            (quoted_string))
+          value: (string
+            (quoted_string)))))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (data
+        (byte)
+        (byte)))))
+
+===
+whitespace and formatting variations
+===
+
+{
+"key1"="value1";
+  "key2"  =  "value2"  ;
+    "key3"
+    =
+    "value3"
+    ;
+}
+
+---
+
+(source_file
+  (dictionary
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))
+    (dictionary_entry
+      key: (string
+        (quoted_string))
+      value: (string
+        (quoted_string)))))

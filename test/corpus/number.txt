@@ -1,0 +1,241 @@
+===
+zero
+===
+
+0
+
+---
+
+(source_file
+  (number))
+
+===
+single digit positive
+===
+
+5
+
+---
+
+(source_file
+  (number))
+
+===
+single digit negative
+===
+
+-5
+
+---
+
+(source_file
+  (number))
+
+===
+multi digit positive
+===
+
+123
+
+---
+
+(source_file
+  (number))
+
+===
+multi digit negative
+===
+
+-123
+
+---
+
+(source_file
+  (number))
+
+===
+large positive integer
+===
+
+999999999
+
+---
+
+(source_file
+  (number))
+
+===
+large negative integer
+===
+
+-999999999
+
+---
+
+(source_file
+  (number))
+
+===
+decimal zero
+===
+
+0.0
+
+---
+
+(source_file
+  (number))
+
+===
+simple decimal
+===
+
+3.14
+
+---
+
+(source_file
+  (number))
+
+===
+negative decimal
+===
+
+-3.14
+
+---
+
+(source_file
+  (number))
+
+===
+decimal starting with zero
+===
+
+0.5
+
+---
+
+(source_file
+  (number))
+
+===
+negative decimal starting with zero
+===
+
+-0.5
+
+---
+
+(source_file
+  (number))
+
+===
+decimal with multiple digits
+===
+
+123.456
+
+---
+
+(source_file
+  (number))
+
+===
+negative decimal with multiple digits
+===
+
+-123.456
+
+---
+
+(source_file
+  (number))
+
+===
+decimal with trailing zero
+===
+
+1.0
+
+---
+
+(source_file
+  (number))
+
+===
+decimal with leading zeros after point
+===
+
+1.001
+
+---
+
+(source_file
+  (number))
+
+===
+large decimal
+===
+
+999.999
+
+---
+
+(source_file
+  (number))
+
+===
+negative large decimal
+===
+
+-999.999
+
+---
+
+(source_file
+  (number))
+
+===
+very small decimal
+===
+
+0.001
+
+---
+
+(source_file
+  (number))
+
+===
+negative very small decimal
+===
+
+-0.001
+
+---
+
+(source_file
+  (number))
+
+===
+decimal with many digits
+===
+
+123.456789
+
+---
+
+(source_file
+  (number))
+
+===
+negative decimal with many digits
+===
+
+-123.456789
+
+---
+
+(source_file
+  (number))
