@@ -347,3 +347,99 @@ whitespace and formatting variations
         (quoted_string))
       value: (string
         (quoted_string)))))
+
+===
+comments before keys
+===
+
+{
+/* Begin strings section */
+  string_1 = hello;
+  string_2 = world;
+/* End strings section */
+
+/* Begin numbers section */
+  number_1 = 42;
+  number_2 = 43;
+/* End numbers section */
+}
+
+---
+
+(source_file
+    (dictionary
+    (block_comment)
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (string
+        (unquoted_string)))
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (string
+        (unquoted_string)))
+    (block_comment)
+    (block_comment)
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (number))
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (number))
+    (block_comment)))
+
+===
+comments after keys
+===
+
+{
+  string_1 /* The first string */ = hello;
+  string_2 /* The second string */ = world;
+}
+
+---
+
+(source_file
+    (dictionary
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (block_comment)
+        (string
+        (unquoted_string)))
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (block_comment)
+        (string
+        (unquoted_string)))))
+
+
+===
+comments after values
+===
+
+{
+  string_1 = hello /* The first string */;
+  string_2 = world /* The second string */;
+}
+
+---
+
+(source_file
+    (dictionary
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (string
+        (unquoted_string))
+        (block_comment))
+    (dictionary_entry
+        (string
+        (unquoted_string))
+        (string
+        (unquoted_string))
+        (block_comment))))

@@ -11,7 +11,8 @@ module.exports = grammar({
   name: "property_list",
 
   extras: $ => [
-    $.comment,
+    $.block_comment,
+    $.line_comment,
     /\s/,
     /\u2028/,
     /\u2029/,
@@ -107,11 +108,6 @@ module.exports = grammar({
     ),
 
     byte: $ => /[0-9A-Fa-f]{2}/,
-
-    comment: $ => choice(
-      $.line_comment,
-      $.block_comment,
-    ),
 
     line_comment: $ => token(seq(
       '//',
