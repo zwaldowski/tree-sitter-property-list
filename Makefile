@@ -2,7 +2,7 @@ ifeq ($(OS),Windows_NT)
 $(error Windows is not supported)
 endif
 
-LANGUAGE_NAME := tree-sitter-property-list
+LANGUAGE_NAME := tree-sitter-property_list
 HOMEPAGE_URL := https://github.com/formkunft/tree-sitter-property-list
 VERSION := 0.1.1
 
