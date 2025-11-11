@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-property-list"
 description = "Property List grammar for tree-sitter. This grammar covers the OpenStep-style property list format, also known as NeXTSTEP-style, old-style, or ASCII plist format."
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Florian Pircher <florian@formkunft.com>"]
 license = "MIT"
 readme = "README.md"

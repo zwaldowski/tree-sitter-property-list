@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-property-list
-        VERSION "0.1.1"
+        VERSION "0.1.2"
         DESCRIPTION "Property List grammar for tree-sitter. This grammar covers the OpenStep-style property list format, also known as NeXTSTEP-style, old-style, or ASCII plist format."
         HOMEPAGE_URL "https://github.com/formkunft/tree-sitter-property-list"
         LANGUAGES C)

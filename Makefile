@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-property_list
 HOMEPAGE_URL := https://github.com/formkunft/tree-sitter-property-list
-VERSION := 0.1.1
+VERSION := 0.1.2
 
 # repository
 SRC_DIR := src

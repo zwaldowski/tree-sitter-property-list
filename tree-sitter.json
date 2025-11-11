@@ -17,7 +17,7 @@
     }
   ],
   "metadata": {
-    "version": "0.1.1",
+    "version": "0.1.2",
     "license": "MIT",
     "description": "Property List grammar for tree-sitter. This grammar covers the OpenStep-style property list format, also known as NeXTSTEP-style, old-style, or ASCII plist format.",
     "authors": [

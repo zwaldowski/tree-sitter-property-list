@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-property-list",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Property List grammar for tree-sitter. This grammar covers the OpenStep-style property list format, also known as NeXTSTEP-style, old-style, or ASCII plist format.",
   "repository": "https://github.com/formkunft/tree-sitter-property-list",
   "license": "MIT",
