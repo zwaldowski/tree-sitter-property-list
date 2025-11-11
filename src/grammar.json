@@ -336,19 +336,6 @@
       "type": "PATTERN",
       "value": "[0-9A-Fa-f]{2}"
     },
-    "comment": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "line_comment"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "block_comment"
-        }
-      ]
-    },
     "line_comment": {
       "type": "TOKEN",
       "content": {
@@ -410,7 +397,11 @@
   "extras": [
     {
       "type": "SYMBOL",
-      "name": "comment"
+      "name": "block_comment"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "line_comment"
     },
     {
       "type": "PATTERN",

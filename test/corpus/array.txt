@@ -60,3 +60,21 @@ multiple with trailing comma
     (number)
     (number)
     (number)))
+
+===
+multiple with comment
+===
+
+(
+	0 /* comment */,
+	1 /* comment */,
+)
+
+---
+
+(source_file
+  (array
+    (number)
+    (block_comment)
+    (number)
+    (block_comment)))
